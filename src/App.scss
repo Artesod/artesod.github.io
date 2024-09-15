@@ -9,6 +9,10 @@ html {
 	padding: 0;
 }
 
+section {
+	transition: height 0.5s ease-in-out;
+}
+
 .aligner {
 	display: flex;
 	align-items: center;
@@ -160,7 +164,9 @@ z-index: -1;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
+	height: auto;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
 	background-size: contain;
 	background-repeat: no-repeat;
 
@@ -267,7 +273,7 @@ z-index: -1;
 	align-items: center;
 }
 
-#resume {
+#experience {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -429,7 +435,7 @@ z-index: -1;
 }
 
 #skills {
-	min-height: 100vh;
+	height: 100vh;
 	width: 100%;
 	overflow: hidden;
 	display: flex;
@@ -488,3 +494,61 @@ footer a:focus {
 	align-items: center;
 	gap: 25px;
 }
+
+#contact {
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  
+	.section-title {
+	  color: white !important;
+	}
+
+  
+	.contact-form {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 15px;
+	  margin-top: 20px;
+  
+	  input, textarea {
+		background-color: rgba(255, 255, 255, 0.1);
+		border: none;
+		border-radius: 5px;
+		padding: 10px;
+		color: white;
+		font-size: 16px;
+  
+		&::placeholder {
+		  color: rgba(255, 255, 255, 0.5);
+		}
+	  }
+  
+	  textarea {
+		min-height: 100px;
+		resize: vertical;
+	  }
+  
+	  button {
+		background-color: green;
+		border: none;
+		border-radius: 5px;
+		padding: 10px;
+		color: white;
+		font-size: 16px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+  
+		&:hover {
+		  background-color: darken(green, 10%);
+		}
+	  }
+	}
+  }

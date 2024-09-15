@@ -7,9 +7,8 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import { Parallax } from 'react-scroll-parallax';
 import Navbar from "./components/Navbar";
-
+import Contact from "./components/Contact";
 const App = () => {
   const [resume, setResume] = useState({})
   const [info, setInfo] = useState({})
@@ -91,6 +90,10 @@ const App = () => {
             resumeExperience={resume.experience ? resume.experience : []}
             resumeBasicInfo={resume.basic_info}
             lightMode = {lightMode}
+          />
+          <Contact
+            sharedBasicInfo={info ? info.basic_info : {}}
+            lightMode={lightMode}
           />
           <Footer sharedBasicInfo={info ? info.basic_info : {}} lightMode = {lightMode}/>
         </div>

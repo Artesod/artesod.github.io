@@ -7,6 +7,7 @@ const Home = (props) => {
   const{
     sharedData,
     checked,
+    lightMode
   } = props
   const [titles, setTitles] = useState([]);
   const [name, setName ] = useState([])
@@ -50,11 +51,19 @@ const Home = (props) => {
   if (sharedData) {
     networks = sharedData.social.map(function (network) {
       return (
-        <span key={network.name} className="m-4" id="tooltip">
-          <a href={network.url} target="_blank" rel="noopener noreferrer">
-            <i className={network.class} id="icons"></i>
-          </a>
-        </span>
+        <a
+          key={network.name}
+          href={network.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+          style={{
+            zIndex: 1000,
+            color: 'white',
+          }}
+        >
+          <i className={network.class}></i>
+        </a>
       );
     });
   }
@@ -82,7 +91,9 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <div className="social-links">{networks}</div>
+        <div className="social-links">
+          {networks}
+        </div>
       </div>
     );
 }

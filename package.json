@@ -9,6 +9,7 @@
   "author": "Joshua Canta <joshdc1288@percipia.com>",
   "license": "MIT",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@iconify/icons-logos": "^1.2.33",
@@ -27,6 +28,8 @@
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-ga": "^3.3.1",
+    "react-google-recaptcha": "^3.1.0",
+    "react-intersection-observer": "^9.13.1",
     "react-scripts": "^5.0.1",
     "react-scroll-parallax": "^3.4.2",
     "react-switch": "^7.0.0",

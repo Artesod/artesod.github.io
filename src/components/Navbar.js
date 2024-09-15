@@ -7,40 +7,23 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import ElevationScroll from './helper/ElevationScroll';
 import Switch from "react-switch";
 
-const pages = ['About', 'Skills', 'Projects', 'Contact'];
+const pages = ['About', 'Skills', 'Portfolio', 'Experience', 'Contact'];
 export default function Navbar(props) {
 
-  const {lightMode, onThemeSwitchChange, checked} = props;
+  const {onThemeSwitchChange, checked} = props;
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-  const handleToggleTheme = () => {
-    onThemeSwitchChange(!checked);
-  };
-
 
   return (
     <ElevationScroll {...props}>
@@ -71,7 +54,6 @@ export default function Navbar(props) {
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}

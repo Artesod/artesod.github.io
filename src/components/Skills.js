@@ -1,12 +1,39 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Style from "../scss/about-module.scss"
 import Terminal from "./Terminal";
+import { useInView } from "react-intersection-observer";
+import Typical from "react-typical";
 
 export default function Skills(props) {
   const {
     skills,
     sharedBasicInfo
   } = props
+  const [showSecondPart, setShowSecondPart] = useState(false);
+  const [showThirdPart, setShowThirdPart] = useState(false);
+
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+    triggerOnce: true 
+  });
+
+  useEffect(() => {
+    if (inView) {
+      const timer = setTimeout(() => {
+        setShowSecondPart(true);
+      }, 1500);
+
+      const timer2 = setTimeout(() => {
+        setShowThirdPart(true);
+      }, 2500);
+
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(timer2);
+      };
+    }
+  }, [inView]);
+
 
   let colors = ['rgb(0,255,164)', 'rgb(166,104,255)'];
 
@@ -27,6 +54,8 @@ export default function Skills(props) {
   };
 
   function skillsText() {
+    if (!inView) return null;
+
     return (
       <>
         <p  style={{color: 'white'}}>
@@ -34,23 +63,39 @@ export default function Skills(props) {
             {sharedBasicInfo ? sharedBasicInfo.firstName.toLowerCase() : ""}
             {sharedBasicInfo ? sharedBasicInfo.lastName.toLowerCase() : ""} $
           </span>{' '}
-          cd skills
+          <Typical
+            steps={["cd skills", 1000]}
+            loop={1}
+            wrapper="span"
+          />
         </p>
-        <p style={{color: 'white'}}>
+        {
+          showSecondPart && (
+            <p style={{color: 'white'}}>
           <span style={{ color: colors[0] }}>
             skills <span className={Style.green}>(main)</span> $
           </span>{' '}
-          ls
+          <Typical
+            steps={["ls", 1000]}
+            loop={1}
+            wrapper="span"
+          />
         </p>
-        {skills !== undefined ? Object.keys(skills).map((key) => {
-          return skillsSection({ [key]: skills[key] });
-        }) : <></>}
+          )
+        }
+        {
+          showThirdPart && (
+            skills !== undefined ? Object.keys(skills).map((key) => {
+              return skillsSection({ [key]: skills[key] });
+            }) : <></>
+          )
+        }
       </>
     );
   }
 
   return (
-    <section id="skills">
+    <section id="skills" ref={ref}>
       <Terminal text={skillsText()} {...props}/>
     </section>
   );
