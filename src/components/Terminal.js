@@ -2,7 +2,6 @@ import React from 'react';
 import Style from '../scss/terminal-modules.scss';
 import classNames from 'classnames';
 import { Box } from '@mui/material';
-import Typical from "react-typical";
 
 const iconClass = 'fa fa-circle';
 

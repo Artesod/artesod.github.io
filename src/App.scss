@@ -9,6 +9,10 @@ html {
 	padding: 0;
 }
 
+section {
+	transition: height 0.5s ease-in-out;
+}
+
 .aligner {
 	display: flex;
 	align-items: center;
@@ -30,30 +34,68 @@ html {
 }
 
 #home, #about, #portfolio, #skills{
-	position: sticky;
-    scroll-behavior: smooth;
-    top: 0;
-    align-self: flex-start;
-    overflow: hidden;
+	scroll-behavior: smooth;
+	position: relative;
 
-	@media screen and (max-width: 1000px) {
-		position: relative;
-		
-	}
 }
 
-header {
+.navbar {
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+// Add a pseudo-element to create a gradient background for better text visibility when navbar is transparent
+.navbar::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 100px;
+background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+pointer-events: none;
+z-index: -1;
+}
+
+#home {
 	height: 100vh;
 	width: 100%;
-	background-size: cover;
-	-webkit-background-size: cover;
 	text-align: center;
 	overflow: hidden;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
+	position: relative;
 }
+
+.parallax-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0); // Start fully transparent
+	z-index: 0;
+	transition: background-color 0.3s ease; // Smooth transition for color change
+}
+
+ .parallax-background {
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	top: -50%; /* Adjust this value to control the parallax effect */
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+  }
+  
+  .parallax-content {
+	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	will-change: transform;
+  }
 
 .language-icon {
 	font-size: 50px;
@@ -87,7 +129,7 @@ header {
 	padding-top: 80px;
 }
 
-header h1 {
+#home h1 {
 	font-size: 400%;
 	text-align: center;
 	font-weight: 600 !important;
@@ -122,7 +164,9 @@ header h1 {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
+	height: auto;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
 	background-size: contain;
 	background-repeat: no-repeat;
 
@@ -229,7 +273,7 @@ header h1 {
 	align-items: center;
 }
 
-#resume {
+#experience {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -391,7 +435,7 @@ header h1 {
 }
 
 #skills {
-	min-height: 100vh;
+	height: 100vh;
 	width: 100%;
 	overflow: hidden;
 	display: flex;
@@ -440,6 +484,71 @@ footer a:focus {
 }
 
 .social-links {
-	margin-top: 50px;
 	font-size: 22px;
+	position: absolute;
+	bottom: 5%;
+	left: 3%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
 }
+
+#contact {
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  
+	.section-title {
+	  color: white !important;
+	}
+
+  
+	.contact-form {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 15px;
+	  margin-top: 20px;
+  
+	  input, textarea {
+		background-color: rgba(255, 255, 255, 0.1);
+		border: none;
+		border-radius: 5px;
+		padding: 10px;
+		color: white;
+		font-size: 16px;
+  
+		&::placeholder {
+		  color: rgba(255, 255, 255, 0.5);
+		}
+	  }
+  
+	  textarea {
+		min-height: 100px;
+		resize: vertical;
+	  }
+  
+	  button {
+		background-color: green;
+		border: none;
+		border-radius: 5px;
+		padding: 10px;
+		color: white;
+		font-size: 16px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+  
+		&:hover {
+		  background-color: darken(green, 10%);
+		}
+	  }
+	}
+  }

@@ -48,12 +48,15 @@ body[data-theme="dark"] {
      color: white;
   }
 
-  header {
-     background-image: url("night2.jpg");
+  #home {
      background-size: auto;
      h1 {
         color: white;
      }
+  }
+
+  .parallax-background {
+   background-image: url("night2.jpg");
   }
 
   #about {
@@ -90,7 +93,7 @@ body[data-theme="dark"] {
      }
   }
 
-  #resume {
+  #experience {
      filter: brightness(100%);
      background-image: url("night3.jpg");
      background-size: auto;
@@ -136,10 +139,10 @@ body[data-theme="dark"] {
   .close-icon {
      color: white;
   }
-
-  #home, #about, #portfolio, #skills, #resume{
-
-	box-shadow:  0px -10px 20px #656565;
-   }
 }
 
+
+#contact {
+   background-image: url("night5.jpg");
+
+}

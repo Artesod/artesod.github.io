@@ -56,7 +56,7 @@ const Experience = ({ resumeExperience, resumeBasicInfo, lightMode }) => {
   }, [resumeExperience, resumeBasicInfo, lightMode]);
 
   return (
-    <section id="resume" className="pb-5">
+    <section id="experience" className="pb-5">
       <div className="col-md-12 mx-auto">
         <div className="col-md-12">
           <h1 className="section-title" style={{ color: lightMode ? 'black' : 'white' }}>
