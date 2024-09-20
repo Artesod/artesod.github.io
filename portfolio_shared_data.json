@@ -1,0 +1,43 @@
+{
+    "basic_info": {
+      "firstName": "Joshua",
+      "lastName" : "Canta",
+      "initials": "AL",
+      "gradient": "-webkit-linear-gradient(135deg, ${colors})", 
+      "titles": [ "I am a Software Engineer", "I am a Full Stack Developer", "I am an avid PC builder"],
+      "social": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/Artesod",
+          "class": "fab fa-github"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/artesod/",
+          "class": "fab fa-instagram"
+        },
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/joshuadcanta/",
+          "class": "fab fa-linkedin"
+        },
+        {
+          "name": "Resume",
+          "url": "https://drive.google.com/file/d/1yHMryUekFB8GiD8gyt0OoBnkhPWOdAzB/view?usp=sharing",
+          "class": "far fa-file"
+        },
+        {
+          "name": "Contact",
+          "url": "https://mail.google.com/mail/?view=cm&fs=1&to=joshdc1288@gmail.com",
+          "class": "far fa-envelope"
+        }
+      ],
+      "image": "myProfile.jpg"
+    },
+    "skills": {
+      "languages": ["JavaScript", "Python", "Java", "Golang"],
+      "frameworks": ["HTML", "CSS", "React", "Redux", "Angular", "Flutter", "NodeJS", "Express", "Material UI", "Bootstrap/jQuery"],
+      "databases": ["MySQL", "SQLite", "Firebase", "MongoDB"],
+      "tools": ["Git", "Postman", "Docker", "NPM", "Yarn", "LateX", "Blender", "Unity"]
+    }
+  }

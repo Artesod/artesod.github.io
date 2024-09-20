@@ -1,0 +1,119 @@
+{
+    "basic_info": {
+      "description_header": "Hello",
+      "description": "I am a Software Engineer currently working for Percipia. My main languages are JavaScript, Java, and Python. I enjoy eating good food, hanging out with friends, and playing games.",
+      "section_name": {
+        "about": "About me",
+        "projects": "Portfolio",
+        "skills": "Skills",
+        "experience": "Experience"
+      }
+    },
+    "projects": [
+      {
+        "title": "Percipia Homepage",
+        "startDate": "2023",
+        "description": "I worked with my team in revamping the existing homepage, as well as other pages within the website",
+        "images": [
+          "images/portfolio/percipia_website/percipia_welcome.png",
+          "images/portfolio/percipia_website/percipia_news.png"
+        ],
+        "url": "https://percipia.com/",
+        "technologies": [
+          {
+            "class": "devicon-html5-plain",
+            "name": "HTML5"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS/SCSS"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "JavaScript"
+          }
+        ]
+      },
+      {
+      "title": "Personal Website",
+      "startDate": "2023",
+      "description": "My personal website that you currently see here.",
+      "images": [
+        "images/portfolio/photography/p1.jpg",
+        "images/portfolio/photography/p2.jpg"
+      ],
+      "url": "https://joshuadcanta.com/",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "ReactJS"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
+      },
+      {
+        "title": "Among The Beat",
+        "startDate": "2020",
+        "description": "A Spotify-Esque website that has the functionality of a music player. In addition, it collects user data and uses to portray the user's specific mood.",
+        "images": [
+          "images/portfolio/animal-shelter/p1.jpg",
+          "images/portfolio/animal-shelter/p2.jpg"
+        ],
+        "url": "https://among-the-beat-sbu.herokuapp.com/",
+        "technologies": [
+          {
+            "class": "devicon-react-plain",
+            "name": "ReactJS"
+          },
+          {
+            "class": "devicon-nodejs-plain",
+            "name": "NodeJS"
+          },
+          {
+            "class": "devicon-mongodb-plain",
+            "name": "MongoDB"
+          }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Percipia",
+        "title": "Software Engineer",
+        "years": "November 2021 - Present",
+        "icon": "fab fa-react experience-icon",
+        "technologies": [
+          "ReactJS",
+          "JavaScript",
+          "HTML/HTML5",
+          "CSS/SCSS",
+          "Golang",
+          "SQL"
+        ]
+      },
+      {
+        "company": "NASA",
+        "title": "Programming Instructor",
+        "years": "June 2020 - August 2020",
+        "icon": "fab fa-python experience-icon",
+        "technologies": [
+          "Python",
+          "Scratch"
+        ]
+      },
+      {
+        "company": "Stony Brook University",
+        "title": "Teaching Assistant",
+        "years": "January 2019 - December 2019",
+        "icon": "fab fa-java experience-icon",
+        "technologies": [
+          "Java",
+          "Algorithms",
+          "Object Oriented Programming"
+        ]
+      }
+    ]
+  }
